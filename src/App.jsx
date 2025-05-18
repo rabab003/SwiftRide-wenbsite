@@ -4,6 +4,7 @@ import About from './Components/Pages/About'
 import Help from './Components/Pages/Help'
 import Benefits from './Components/Pages/Benefits'
 import { Route , Routes } from 'react-router-dom'
+import Error from './Components/Pages/ErrorPage'
 
 function App() {
 
@@ -14,10 +15,12 @@ function App() {
       <Navigation/>
 
        <Routes>
+         <Route path='/' element={<Home/>} />
          <Route path='/home' element={<Home/>} />
          <Route path='/about' element={<About/>} />
          <Route path='/benefits' element={<Benefits/>} />
          <Route path='/help' element={<Help/>} />
+         <Route path='*' element={<Error/>}/>
       </Routes>
      
      
